@@ -1,38 +1,17 @@
-variable:
-  profiles: dev
-
+eureka:
+  instance:
+    instance-id: ${eureka.instance.hostname}:${server.port}
+    lease-renewal-interval-in-seconds: 2 #契约更新间隔
+    lease-expiration-duration-in-seconds: 4 #契约过期时间
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
 server:
-  port: 9002
+  port: 10001
 spring:
-  application:
-    name: oa-center
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
   zipkin:
     base-url: http://localhost:9411/
   sleuth:
     sampler:
       percentage: 1.0 #sleuth 采样率, 1.0代表所有的span都会被采集到zipkin中. 0.0则代表所有的span都不会被采集到zipkin中.
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8080/eureka/
-  instance:
-    prefer-ip-address: true
-
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-
-
-api:
-  author-name: '{cipher}cf71679f338d9132c0211a13b9dacdd82cb59cc33a9b1e0ed25239961248b354dfb5177ae20bcf2eb41b1da77a93b1c3'
-  reason-content: my job is basketball
-  
-
