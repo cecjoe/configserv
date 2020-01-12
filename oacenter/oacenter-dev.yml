@@ -6,6 +6,11 @@ server:
 spring:
   application:
     name: oa-center
+  zipkin:
+    base-url: http://127.0.0.1:9411/
+  sleuth:
+    sampler:
+      percentage: 1.0
 eureka:
   client:
     serviceUrl:
