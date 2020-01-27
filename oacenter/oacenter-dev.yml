@@ -6,6 +6,15 @@ server:
 spring:
   application:
     name: oa-center
+  datasource:
+    # 配置数据源
+    driver-class-name: com.mysql.jdbc.Driver
+    # 使用druid连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/oa?characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&useSSL=true
+    username: root
+    password: 123456
+
   zipkin:
     base-url: http://127.0.0.1:9411/
   sleuth:
@@ -18,6 +27,19 @@ eureka:
       defaultZone: http://localhost:8080/eureka/
   instance:
     prefer-ip-address: true
+    
+# ====================MybatisPlus====================
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: not_empty
+      table-underline: true
+      db-type: mysql
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+  typeAliasesPackage: com.oa.center.dto.rsp
+  mapper-locations: classpath:/mapper/*.xml
 
 
 management:
