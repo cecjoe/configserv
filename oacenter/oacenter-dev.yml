@@ -29,6 +29,8 @@ eureka:
 # ====================MybatisPlus====================
 mybatis-plus:
   global-config:
+    configuration:
+      map-underscore-to-camel-case: true
     db-config:
       id-type: auto
       field-strategy: not_empty
