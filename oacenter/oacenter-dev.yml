@@ -47,6 +47,10 @@ management:
     web:
       exposure:
         include: '*'
+        
+spring:
+  activiti:
+    process-definition-location-prefix: classpath*:/processes/
 
 
 api:
