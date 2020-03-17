@@ -53,3 +53,19 @@ management:
 api:
   author-name: mrtang
   reason-content: only play
+  
+  
+      
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-uri: http://localhost:8085/oauth/token_key
+#        key-value: 123456
+    client:
+      client-id: client_2
+      client-secret: 123456
+      access-token-uri: http://localhost:8085/oauth/token
+      grant-type: password
+      scope: server
+      user-authorization-uri: http://localhost:8085/oauth/authorize
