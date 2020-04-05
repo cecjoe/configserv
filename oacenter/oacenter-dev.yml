@@ -56,13 +56,17 @@ api:
   
   
       
+      
+      
 security:
   oauth2:
     resource:
-      user-info-uri: http://localhost:8085/users/current
+      jwt:
+        key-uri: http://localhost:8085/oauth/token_key
     client:
-      id: client_2
+      client-id: client_2
       client-secret: 123456
       access-token-uri: http://localhost:8085/oauth/token
-      grant-type: client_credentials,password
+      grant-type: password
       scope: server
+      user-authorization-uri: http://localhost:8085/oauth/authorize
