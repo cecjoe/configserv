@@ -6,6 +6,10 @@ server:
 spring:
   application:
     name: oa-center
+  boot:
+    admin:
+      client:
+        url: http://localhost:8000
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
