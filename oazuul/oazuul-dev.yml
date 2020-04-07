@@ -16,6 +16,8 @@ management:
 
 zuul:
   sensitiveHeaders: Cookie,Set-Cookie
+  oauth:
+    enabled: true
   ignored-services: '*'
   routes:
     sys-oa: /sysoa/**
@@ -33,3 +35,5 @@ zuul:
 #appoint:
 #  ribbon:
 #    listOfServers: http://localhost:8092,http://localhost:8091,http://localhost:8090
+
+
