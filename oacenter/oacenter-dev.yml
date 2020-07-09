@@ -54,17 +54,7 @@ api:
   author-name: mrtang
   reason-content: only play
   
-  
-feign:
-  hystrix:
-    enabled: false
-    
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          strategy: SEMAPHORE
+ 
   
   
       
