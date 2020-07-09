@@ -55,6 +55,11 @@ api:
   reason-content: only play
   
   
+feign:
+  hystrix:
+    enabled: false
+  
+  
       
       
       
