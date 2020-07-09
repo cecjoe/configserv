@@ -58,6 +58,13 @@ api:
 feign:
   hystrix:
     enabled: false
+    
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
   
   
       
