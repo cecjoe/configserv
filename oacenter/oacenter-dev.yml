@@ -60,6 +60,10 @@ api:
   author-name: mrtang
   reason-content: only play
   
+music:
+  project-name: 音乐项目
+  price: 305
+  
  
 # 是否启动LCN负载均衡策略(优化选项，开启与否，功能不受影响)
 tx-lcn:
